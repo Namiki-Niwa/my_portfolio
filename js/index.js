@@ -5,6 +5,12 @@ $("#js-btnDrawer").on("click", function(){
   $("body").toggleClass("is-fixed");
 });
 
+$(".button__text").on("click", function(){
+  $("#js-btnDrawer").toggleClass("is-checked");
+  $("#js-drawer").slideToggle();
+  $("body").removeClass("is-fixed");
+
+});
 
 // $(document).ready(function() {
 //   // 「詳しく見る」ボタンがクリックされたときに対応するモーダルを開く

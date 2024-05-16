@@ -62,7 +62,7 @@ body.is-fixed {
   left: 0;
   width: 100%;
   z-index: 999;
-  background-color: rgb(0, 135, 65);
+  background-color: rgba(0, 171, 82, 0.8);
 }
 .header__container {
   position: relative;
@@ -237,8 +237,7 @@ body.is-fixed {
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%; /* モーダルの幅を設定 */
-  max-width: 700px; /* モーダルの最大幅を設定 */
+  width: 80%; /* モーダルの最大幅を設定 */
 }
 
 /* 閉じるボタンのスタイル */
@@ -246,7 +245,7 @@ body.is-fixed {
   color: #fff;
   position: fixed;
   top: 100px;
-  right: 10px;
+  right: 5%;
   font-size: 20px;
 }
 
@@ -416,7 +415,7 @@ body.is-fixed {
   .service__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10%;
+    gap: 6%;
   }
   .service__item + .service__item {
     margin-top: 0;
@@ -428,6 +427,14 @@ body.is-fixed {
   }
   .works__item + .works__item {
     margin-top: 0;
+  }
+  .modal-content {
+    margin-inline: auto 4%;
+    max-width: 70%;
+  }
+  .close {
+    right: 2%;
+    font-size: 2em;
   }
   .about__container {
     display: -webkit-box;
@@ -447,7 +454,6 @@ body.is-fixed {
   .about__img img {
     min-width: 100%;
   }
-  /* モーダルのスタイル */
   .flow__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
