@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- 検索にあたらないようにするメタ設定 -->
   <!-- <meta name="robots" content="noindex"> -->
-  <title>ポートフォリオサイト</title>
+  <title>Namiki's Portfolio</title>
   <!-- 検索エンジン表示時の説明メタ -->
-  <meta name="description" content="フリーランスWEBコーダーのポートフォリオサイトです。">
+  <meta name="description" content="ウェブ制作のコーディングはお任せください。丁寧なヒヤリングから低予算でお客様の目的に沿ったウェブ制作を一緒に作りましょう。">
 <!-- Google Fontsの読み込み -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Remixの読み込み -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
   <!-- cssの読み込み -->
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
@@ -21,11 +23,22 @@
   <div class="wrapper">
     <header class="header">
       <div class="header__container">
-        <h1 class="header__logo">Namiki's<br>Portfolio</h1>
+        <a href="#"><h1 class="header__logo">Namiki's<br>Portfolio</h1></a>
         <button type="button" id="js-btnDrawer" class="header__menu-btn">Menu</button>
         <div id="js-drawer" class="header__contents">
           <nav class="header__nav">
             <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="#message" class="header__nav-link button">
+                  <span class="button__icon">
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.502817 8.41785C-0.203433 8.81822 -0.137808 9.88587 0.615317 10.1962L4.99969 12.0119V15.2179C4.99969 15.7797 5.45594 16.2328 6.02157 16.2328C6.32469 16.2328 6.61219 16.0994 6.80594 15.8666L8.74344 13.5606L12.6153 15.1621C13.2059 15.4073 13.8903 15.0224 13.9872 14.3955L15.9872 1.4843C16.0466 1.10876 15.8809 0.730116 15.5653 0.515964C15.2497 0.301812 14.8372 0.28319 14.5028 0.472513L0.502817 8.41785ZM2.13094 9.20928L12.8028 3.15406L5.94032 10.7704L5.97782 10.8014L2.13094 9.20928ZM12.6028 13.5451L7.39657 11.388L14.0872 3.96101L12.6028 13.5451Z" class="button__icon-path"/>
+                      </svg>
+                       
+                  </span>
+                  <span class="button__text">Message -</span>
+                </a>
+              </li>
               <li class="header__nav-item">
                 <a href="#service" class="header__nav-link button">
                   <span class="button__icon">
@@ -70,17 +83,6 @@
                 </a>
               </li>
               <li class="header__nav-item">
-                <a href="#message" class="header__nav-link button">
-                  <span class="button__icon">
-                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.502817 8.41785C-0.203433 8.81822 -0.137808 9.88587 0.615317 10.1962L4.99969 12.0119V15.2179C4.99969 15.7797 5.45594 16.2328 6.02157 16.2328C6.32469 16.2328 6.61219 16.0994 6.80594 15.8666L8.74344 13.5606L12.6153 15.1621C13.2059 15.4073 13.8903 15.0224 13.9872 14.3955L15.9872 1.4843C16.0466 1.10876 15.8809 0.730116 15.5653 0.515964C15.2497 0.301812 14.8372 0.28319 14.5028 0.472513L0.502817 8.41785ZM2.13094 9.20928L12.8028 3.15406L5.94032 10.7704L5.97782 10.8014L2.13094 9.20928ZM12.6028 13.5451L7.39657 11.388L14.0872 3.96101L12.6028 13.5451Z" class="button__icon-path"/>
-                      </svg>
-                       
-                  </span>
-                  <span class="button__text">Message -</span>
-                </a>
-              </li>
-              <li class="header__nav-item">
                 <a href="#contact" class="header__nav-link button  button--bg">
                   <span class="button__icon">
                     <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -92,7 +94,7 @@
                   <!-- <a href="tel:090-2377-2959" class="button__text">Contact -</a> -->
                 </a>
               </li>
-              <li class="header__nav-item">
+              <!-- <li class="header__nav-item">
                 <a href="https://twitter.com/nworkweb_tw" target="_blank"  class="header__nav-link button button--border">
                   <span class="button__icon">
                     <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -102,7 +104,7 @@
                   </span>
                   <span class="button__text">Twitter -</span>
                 </a>
-              </li>
+              </li> -->
             </ul>
           </nav>
         </div>
@@ -117,12 +119,36 @@
         </picture>
         <div class="fv__contents">
           <h1 class="fv__heading">
-            <span class="fv__heading-main">Web Corder -</span>
-            <span class="fv__heading-sub">ご覧いただきありがとうございます。<br>フリーランスです。
+            <span class="fv__heading-main">ー　Web Corder　ー</span>
+            <span class="fv__heading-sub">ご覧いただきありがとうございます。<br>フリーランスWEBコーダーの丹羽（ニワ）と申します！
             </span>
           </h1>
         </div>
       </div>
+
+      <section id="message" class="section message">
+        <div class="section__inner">
+          <div class="message__container">
+            <div class="message__img"><img src="/img/img_message.png" alt=""></div>
+            <div class="message__contents">
+              <h2 class="section__ttl">
+                <span class="section__ttl-main">Message -</span>
+                <span class="section__ttl-sub">ご依頼をお考えの方へ</span>
+              </h2>
+              <p class="message__text">
+                ・ウェブサイトは欲しいけどウェブ制作会社に頼むと高い...<br>
+                ・初めての依頼で不安...、相場が分からない...<br>
+                <br>
+                このようなお悩みでご依頼を躊躇してしまっているお客様にも気軽にご相談いただきたいという想いで個人でサービスを開始致しました。
+                ウェブサイトの提供だけではなくその先の「目的」をしっかり確認しお客様の目的を達成するためのお手伝いをさせていただきます。<br>
+                お悩みの方はぜひご相談だけでも大丈夫ですのでご連絡くださいませ！
+
+                
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section id="service" class="section service">
         <div class="section__inner">
@@ -130,14 +156,16 @@
             <span class="section__ttl-main">Service -</span>
             <span class="section__ttl-sub">提供サービス</span>
           </h2>
-          <p class="section__lead-text">行っているサービス内容です。「Web制作を頼みたい」「既存のWebサイトを修正・改善したい」など、是非、お気軽にご相談ください。          
+          <p class="section__lead-text">
+            ちょっとした既存のサイトの修正、LP作成やWEBサイト制作も承っております。<br>
+            ご予算や日程にご不安がある場合は無料でご相談承っておりますのでご連絡くださいませ。
           </p>
           <div class="section__contents">
             <ul class="service__list">
               <li class="service__item">
                 <div class="service__item-img">
                   <img class="service__item-img" src="/img/img_service1.svg" alt="">
-                  <h3 class="service__item-name">ホームページ制作</h3>
+                  <h3 class="service__item-name">LP/ホームページ制作</h3>
                   <p class="service__item-text">
                     ご要望に応じて柔軟にご提案させていただきます。目的を達成するためのホームページを一緒に作成していきましょう！
                   </p>
@@ -172,24 +200,50 @@
             <span class="section__ttl-main">Works -</span>
             <span class="section__ttl-sub">実績紹介</span>
           </h2>
-          <p class="section__lead-text">これまで制作したWebサイトです。また、当サイトも自ら制作していますので実績の一つとして御覧ください。
-          </p>
+          <!-- <p class="section__lead-text">これまで制作したWebサイトです。また、当サイトも自ら制作していますので実績の一つとして御覧ください。
+          </p> -->
           <div class="section__contents">
             <ul class="works__list">
               <li class="works__item">
-                <div class="works__item-img"><img src="/img/img_works1.jpg" alt=""></div>
-                <h3 class="works__item-name">ポートフォリオ</h3>
-                <a href="#" target="_blank" class="works__item-link">詳しく見る</a>
+                <div class="works__item-img"><img src="./img/img_works1.png" alt=""></div>
+                <h3 class="works__item-name">ブートストラップを使用したサイト</h3>
+                <button class="works__item-link" data-modal-id="modal1">詳しく見る</button>
+                <!-- モーダル --> 
+                <div id="modal1" class="modal">
+                  <i class="ri-close-large-line close"></i>
+                  <!-- <span class="close">×</span> -->
+                  <img class="modal-content" src="./img/bootstrap_start.png">
+                </div>
               </li>
               <li class="works__item">
-                <div class="works__item-img"><img src="/img/img_works2.jpg" alt=""></div>
+                <div class="works__item-img"><img src="./img/img_works2.jpg" alt=""></div>
                 <h3 class="works__item-name">スポーツ店公式タイトル</h3>
-                <a href="#" target="_blank class="works__item-link">詳しく見る</a>
+                <button class="works__item-link" data-modal-id="modal2">詳しく見る</button>
+                <!-- モーダル --> 
+                <div id="modal2" class="modal">
+                  <i class="ri-close-large-line close"></i>
+                  <img class="modal-content" src="./img/sweetdelight.png">
+                </div>
               </li>
               <li class="works__item">
-                <div class="works__item-img"><img src="/img/img_works3.jpg" alt=""></div>
-                <h3 class="works__item-name">家具のサブスクLP</h3>
-                <a href="#" target="_blank class="works__item-link">詳しく見る</a>
+                <div class="works__item-img"><img src="./img/img_works3.png" alt=""></div>
+                <h3 class="works__item-name">コーポレートサイト</h3>
+                <button class="works__item-link" data-modal-id="modal3">詳しく見る</button>
+                <!-- モーダル --> 
+                <div id="modal3" class="modal">
+                  <i class="ri-close-large-line close"></i>
+                  <img class="modal-content" src="./img/company.png">
+                </div>
+              </li>
+              <li class="works__item">
+                <div class="works__item-img"><img src="./img/img_works4.png" alt=""></div>
+                <h3 class="works__item-name">街の観光案内サイト</h3>
+                <button class="works__item-link" data-modal-id="modal3">詳しく見る</button>
+                <!-- モーダル --> 
+                <div id="modal4" class="modal">
+                  <i class="ri-close-large-line close"></i>
+                  <img class="modal-content" src="./img/visit_chino.png">
+                </div>
               </li>
             </ul>
           </div>
@@ -199,7 +253,6 @@
       <section id="about" class="section about">
         <div class="section__inner">
           <div class="about__container">
-            <div class="about__img"><img src="/img/profile.jpeg" alt=""></div>
             <div class="about__text-contents">
               <h2 class="section__ttl">
                 <span class="section__ttl-main">About -</span>
@@ -212,6 +265,7 @@
                 趣味：野球、海外旅行(好きな国はイギリス)、英語学習、Netflix
               </p>
             </div>
+            <div class="about__img"><img src="./img/selfphoto3.JPG" alt=""></div>
           </div>
         </div>
       </section>
@@ -266,52 +320,28 @@
         </section>
       </section>
 
-      <section id="id" class="section message">
-        <div class="section__inner">
-          <div class="message__container">
-            <div class="message__img"><img src="/img/img_message.png" alt=""></div>
-            <div class="message__contents">
-              <h2 class="section__ttl">
-                <span class="section__ttl-main">Message -</span>
-                <span class="section__ttl-sub">ご依頼をお考えの方へ</span>
-              </h2>
-              <p class="message__text">
-                静的なHTMLコーディングからWordPress化まで対応可能です。
-                デザインカンプの意図をしっかりと理解した上で、迅速、丁寧な対応でコーディン業務をサポートいたします！
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="page-bottom">
+      <div class="page-bottom" id="contact">
         <div class="page-bottom__item page-bottom__item--contact">
           <h2 class="section__ttl section__ttl--center">
             <span class="section__ttl-main">Contact -</span>
             <span class="section__ttl-sub">お問い合わせ</span>
           </h2>
-          <a href="#" target="_blank" class="page-bottom__buitton button button--border">
-            <span class="button__icon">
-              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.5 2.28406C2.15625 2.28406 1.875 2.56339 1.875 2.90479V3.76217L8.61328 9.25563C9.42188 9.91515 10.582 9.91515 11.3906 9.25563L18.125 3.76217V2.90479C18.125 2.56339 17.8438 2.28406 17.5 2.28406H2.5ZM1.875 6.17138V12.8365C1.875 13.1779 2.15625 13.4572 2.5 13.4572H17.5C17.8438 13.4572 18.125 13.1779 18.125 12.8365V6.17138L12.5781 10.6949C11.0781 11.917 8.91797 11.917 7.42188 10.6949L1.875 6.17138ZM0 2.90479C0 1.53531 1.12109 0.421875 2.5 0.421875H17.5C18.8789 0.421875 20 1.53531 20 2.90479V12.8365C20 14.2059 18.8789 15.3194 17.5 15.3194H2.5C1.12109 15.3194 0 14.2059 0 12.8365V2.90479Z" class="button__icon-path" />
-                </svg>
-                
-            </span>
-            <span class="button__text">Contact</span>
-          </a>
+          <div style="text-align: center;">
+            <a class="mailtoui" href="mailto:namiki.niwa.0000@gmail.com">→メールでお問い合わせ</a>
+          </div>
         </div>
         <div class="page-bottom__item page-bottom__item--twitter">
           <h2 class="section__ttl section__ttl--center">
             <span class="section__ttl-main">Twitter -</span>
             <span class="section__ttl-sub">ツイッター</span>
           </h2>
-          <a href="#" target="_blank" class="page-bottom__buitton button button--border">
+          <a tabindex="-1" target="_blank" class="page-bottom__buitton button button--border">
             <span class="button__icon">
               <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.9441 6.40799C17.9568 6.58444 17.9568 6.76092 17.9568 6.93736C17.9568 12.3191 13.8325 18.5201 6.29441 18.5201C3.97207 18.5201 1.81473 17.8521 0 16.6926C0.329961 16.7304 0.647187 16.743 0.989844 16.743C2.90605 16.743 4.67004 16.1002 6.07867 15.0037C4.27664 14.9659 2.76648 13.7937 2.24617 12.1805C2.5 12.2183 2.75379 12.2435 3.02031 12.2435C3.38832 12.2435 3.75637 12.193 4.09898 12.1049C2.22082 11.7267 0.812148 10.0883 0.812148 8.10949V8.05909C1.35781 8.36158 1.99238 8.55063 2.66492 8.57581C1.56086 7.84479 0.837539 6.59704 0.837539 5.18543C0.837539 4.42922 1.04055 3.73602 1.3959 3.13105C3.41367 5.60136 6.44668 7.21459 9.84766 7.39107C9.78422 7.08858 9.74613 6.77353 9.74613 6.45843C9.74613 4.21496 11.5736 2.38745 13.8451 2.38745C15.0253 2.38745 16.0913 2.87899 16.84 3.67302C17.7664 3.49658 18.6547 3.15626 19.4416 2.68994C19.137 3.63523 18.4898 4.42926 17.6395 4.93337C18.4644 4.84519 19.2639 4.61827 19.9999 4.30322C19.4416 5.10981 18.7436 5.82819 17.9441 6.40799Z" class="button__icon-path"/>
                 </svg>
             </span>
-            <span class="button__text">Twitter</span>
+            <span class="button__text">準備中</span>
           </a>
         </div>
       </div>
@@ -324,6 +354,7 @@
   
 
   <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="./js/index.js"></script>
 </body>

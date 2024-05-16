@@ -1,10 +1,19 @@
 @use "color";
 @use "breakpoints";
 
+html {
+  scroll-behavior: smooth;
+  // scroll-padding-top: parts.$header_height-sp;
+  
+  // @include breakpoints.mq(pc) {
+  //  scroll-padding-top: parts.$header_height-pc; 
+  // }
+}
+
 body {
   font-family: 'Oswald','Noto Sans JP', sans-serif;
   color: color.$cl-black;
-  background-color: black;
+  // background-color: black;
 
   &.is-fixed {
     overflow: hidden;
@@ -59,12 +68,12 @@ body {
 
 // header
 .header {
-  background-color: color.$bg-dark;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
+  background-color: rgb(0, 135, 65);
 
   &__container {
     position: relative;
@@ -94,7 +103,7 @@ body {
    }
 
    &.is-checked {
-    background: url(/img/bg_menu-close.png) center center no-repeat;
+    background: url(../img/bg_menu-close.png) center center no-repeat;
     background-size: 100% auto;
    }
   }
@@ -127,9 +136,6 @@ body {
     background-size: 100% auto;
     padding: 32px;
   }
-  // &__heading {
-
-  // }
   &__heading-main {
     display: block;
     font-size: 24px;
@@ -174,6 +180,27 @@ body {
   }
 }
 
+// message
+.message {
+
+  &__contents {
+    width: 100%;
+  }
+  &__img {
+    width: 100%;
+    margin-bottom: 32px;
+
+    img {
+      box-shadow: 0 4px 15px 0 rgba(color.$black, 0.5);
+    }
+
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
 // service
 .service {
 
@@ -207,10 +234,6 @@ body {
 .works {
   background-color: color.$bg-light;
   
-
-  // &__list {
-
-  // }
   &__item {
 
     & + & {
@@ -237,20 +260,62 @@ body {
   }
 }
 
+// works のモーダル
+.modal {
+  // padding-top: 30%;
+  padding-top: 100px;
+  display: none; /* モーダルを初期状態では非表示にする */
+  position: fixed; /* モーダルを画面上部に固定 */
+  z-index: 1; /* モーダルを最前面に配置 */
+  left: 0;
+  top: 0;
+  width: 100%; /* 画面幅いっぱいにモーダルを広げる */
+  height: 100%; /* 画面高さいっぱいにモーダルを広げる */
+  overflow: auto; /* コンテンツがモーダルより大きい場合にスクロールバーを表示 */
+  background-color: rgba(0,0,0,0.7); /* 背景を暗くする */
+  opacity: 0; /* 初期状態で不透明度を0に設定する */
+  transition: opacity 0.3s; /* opacityの変化を0.3秒かけてアニメーション化する */
+}
+
+/* モーダル内のコンテンツのスタイル */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%; /* モーダルの幅を設定 */
+  max-width: 700px; /* モーダルの最大幅を設定 */
+  // max-height: 80%; /* モーダルの最大高さを設定 */
+}
+
+/* 閉じるボタンのスタイル */
+.close {
+  color: #fff;
+  position: fixed;
+  top: 100px;
+  right: 10px;
+  font-size: 20px;
+  // font-weight: bold;
+}
+
+/* ホバー時のスタイル */
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
 // about
 .about {
 
 &__img {
-  margin-bottom: 32px;
-
   img {
     box-shadow: 0 4px 15px 0 rgba(color.$black, 0.5);
   }
-
 }
-// &__text-contents {
-
-// }
+&__text-contents {
+  margin-bottom: 30px;
+}
 &__text {
   font-size: 16px;
   line-height: 1.6;
@@ -260,6 +325,8 @@ body {
   }
 }
 }
+
+
 
 // flow
 .flow {
@@ -285,8 +352,9 @@ body {
     left: 50%;
     transform: translateX(-50%);
     font-size: 24px;
-    background-color: color.$bg-dark;
-    color: color.$white;
+    background-color: color.$white;
+    border: 1px solid color.$cl-black;
+    color: color.$black;
     width: 48px;
     height: 48px;
     display: flex;
@@ -310,25 +378,8 @@ body {
   }
 }
 
-// message
-.message {
 
-  // &__container {
 
-  // }
-  &__img {
-    margin-bottom: 32px;
-
-    img {
-      box-shadow: 0 4px 15px 0 rgba(color.$black, 0.5);
-    }
-
-  }
-  &__text {
-    font-size: 16px;
-    line-height: 1.6;
-  }
-}
 
 // page-bottom
 .page-bottom {
@@ -387,7 +438,7 @@ body {
     display: none;
   }
   &__contents {
-    display: block;
+    display: block!important;
     border: none;
   }
  }
@@ -447,7 +498,7 @@ body {
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 8%;
+    gap: 10%;
   }
 
   &__item {
@@ -461,8 +512,8 @@ body {
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8%;
+    grid-template-columns: repeat(2, 0.5fr);
+    gap: 5%;
   }
 
   &__item {
@@ -476,10 +527,25 @@ body {
 
   &__container {
     display: flex;
-    flex-direction: row-reverse;
-    gap: 40px;
+    align-items: center;
+  }
+  &__text-contents {
+    width: 60%;
+  }
+  &__img {
+    width: 40%;
+    margin-bottom: 0;
+    img {
+      min-width: 100%;
+    }
   }
  }
+
+//  worksのモーダル
+/* モーダルのスタイル */
+
+
+
 
  .flow {
 
@@ -497,14 +563,20 @@ body {
   }
  }
 
+
  .message {
 
   &__container {
     display: flex;
+    align-items: center;
     flex-direction: row-reverse;
     gap: 40px;
   }
+  &__img {
+   margin-bottom: 0;
+  }
  }
+
 
  .page-bottom {
 
