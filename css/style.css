@@ -216,6 +216,11 @@ body.is-fixed {
   text-decoration: underline;
   font-size: 14px;
 }
+.works__demo-link {
+  margin-left: 20px;
+  font-size: 14px;
+  text-decoration: underline;
+}
 
 .modal {
   padding-top: 100px;

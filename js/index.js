@@ -7,31 +7,11 @@ $("#js-btnDrawer").on("click", function(){
 
 $(".button__text").on("click", function(){
   $("#js-btnDrawer").toggleClass("is-checked");
-  $("#js-drawer").slideToggle();
+  $("#js-drawer").slideUp();
   $("body").removeClass("is-fixed");
 
 });
 
-// $(document).ready(function() {
-//   // 「詳しく見る」ボタンがクリックされたときに対応するモーダルを開く
-//   $(".works__item-link").click(function() {
-//     var imgSrc = $(this).data("img-src");
-//     $("#modal .modal-content").attr("src", imgSrc);
-//     $("#modal").fadeIn();
-//   });
-
-//   // 閉じるボタンがクリックされたときにモーダルを閉じる
-//   $(".close").click(function() {
-//     $(this).closest(".modal").fadeOut();
-//   });
-
-//   // モーダル外の領域がクリックされたときにモーダルを閉じる
-//   $(".modal").click(function(event) {
-//     if ($(event.target).is(".modal")) {
-//       $(this).fadeOut();
-//     }
-//   });
-// });
 
 
 // モーダルを開く関数
